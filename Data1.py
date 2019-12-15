@@ -9,6 +9,7 @@ import pandas as pd #for importing files
 dataset=pd.read_csv('Data.csv')
 x = dataset.iloc[:,:-1].values
 y = dataset.iloc[:,3].values
+
 #Populatig the missing values
 from sklearn.preprocessing import Imputer
 imputer=Imputer(missing_values="NaN",strategy="mean",axis=0)
